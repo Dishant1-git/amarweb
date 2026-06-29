@@ -287,24 +287,28 @@
 
 .gallery-filter-btn {
   border: none;
-  background: transparent;
-  padding: 10px 24px;
+  background: var(--primary-soft-color);
+  padding: 12px 28px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--portfolio-text-muted);
+  color: var(--portfolio-primary);
   border-radius: 50px;
   cursor: pointer;
   transition: var(--portfolio-transition);
 }
 
 .gallery-filter-btn:hover {
+  background: var(--primary-soft-color);
   color: var(--portfolio-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(173, 140, 92, 0.15);
 }
 
 .gallery-filter-btn.active {
   background-color: var(--portfolio-primary);
   color: var(--white);
-  box-shadow: 0 4px 12px rgba(191, 141, 91, 0.35);
+  box-shadow: 0 10px 25px rgba(173, 140, 92, 0.3);
+  transform: translateY(-2px);
 }
 
 /* Gallery Grid */
