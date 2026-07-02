@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="....">
-    <meta name="keywords" content="...">
-    <meta name="author" content="PointTheme">
+    <meta name="description"
+        content="Unique Glazing provides professional UPVC and aluminium windows, doors, conservatories, glazing repairs, replacements and installations across the UK.">
+
+    <meta name="keywords"
+        content="Unique Glazing, UPVC windows, aluminium windows, double glazing, glazing repairs, doors, conservatories, window replacement">
+
+    <meta name="author" content="Unique Glazing">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Title -->
-    <title>Wodmart-Furniture eCommerce HTML Template</title>
-    <link rel="icon" type="image/x-icon" sizes="20x20" href="assets/images/icon/favicon.svg">
+    <title>Unique Glazing | Contact Us | Professional UPVC & Aluminium Windows & Doors</title>
+    <link rel="icon" type="image/x-icon" sizes="20x20" href="assets/images/icon/finalfav.png">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-5.3.0.min.css">
@@ -21,6 +25,111 @@
     <link rel="stylesheet" type="text/css" href="assets/css/plugin.css">
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <style>
+        .map-link-container {
+            display: block;
+            text-decoration: none;
+        }
+
+        .map-wrapper-box {
+            position: relative;
+            width: 100%;
+            height: 952px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 24px 70px rgba(19, 23, 43, 0.08);
+            border: 1px solid rgba(19, 23, 43, 0.1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .map-wrapper-box .map-frame {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            pointer-events: none;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(19, 23, 43, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.4s ease;
+        }
+
+        .map-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(173, 140, 92, 0.3);
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: none;
+            letter-spacing: 0.5px;
+        }
+
+        .map-btn i {
+            font-size: 20px;
+            color: var(--white);
+            transition: all 0.4s ease;
+        }
+
+        .map-wrapper-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 80px rgba(173, 140, 92, 0.15);
+            border-color: rgba(173, 140, 92, 0.3);
+        }
+
+        .map-wrapper-box:hover .map-frame {
+            transform: scale(1.02);
+        }
+
+        .map-wrapper-box:hover .map-overlay {
+            background: rgba(19, 23, 43, 0.25);
+        }
+
+        .map-wrapper-box:hover .map-btn {
+            background: #FCC013;
+            color: #28292c;
+            box-shadow: 0 10px 30px rgba(252, 192, 19, 0.35);
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .map-wrapper-box:hover .map-btn i {
+            color: #28292c;
+        }
+
+        @media (max-width: 1199px) {
+            .map-wrapper-box {
+                height: 450px;
+            }
+            .map-btn {
+                opacity: 1;
+                transform: translateY(0);
+                padding: 12px 20px;
+                font-size: 14px;
+                background: var(--primary-color);
+                color: var(--white);
+            }
+            .map-btn i {
+                color: var(--white);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -266,9 +375,17 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-xxl-6 col-xl-4">
-                        <iframe class="map-frame"
-                            src="https://www.google.com/maps/embed/v1/place?q=Dhaka,+Bangladesh&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <a href="https://share.google/4yrD7q20QawjM7MMN" target="_blank" class="map-link-container">
+                            <div class="map-wrapper-box">
+                                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.4133503366347!2d-0.5983937!3d51.505632199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767b6224272da1%3A0xdf9c32b5c40c9a32!2sUnique%20Glazing%20UPVC%20%26%20Aluminium%20Ltd.!5e0!3m2!1sen!2sin!4v1782969038721!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                <div class="map-overlay">
+                                    <div class="map-btn">
+                                        <i class="ri-map-pin-2-fill"></i>
+                                        <span>Open in Google Maps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-xxl-6 col-xl-8">
                         <div class="get-touch-box">
@@ -278,9 +395,8 @@
                                         <div class="circle-icon">
                                             <img src="assets/images/icon/call.png" alt="img">
                                         </div>
-                                        <a href="javascript:void(0)">
-                                            <p class="pera text-color-tertiary">+(323) 9847 3847 383 +(434) 5466 5467
-                                                443</p>
+                                        <a href="tel:+07581316343">
+                                            <p class="pera text-color-tertiary">+07581316343</p>
                                         </a>
                                     </div>
                                 </div>
@@ -289,9 +405,8 @@
                                         <div class="circle-icon">
                                             <img src="assets/images/icon/mail.png" alt="img">
                                         </div>
-                                        <a href="javascript:void(0)">
-                                            <p class="pera text-color-tertiary">infoyour@gmail.com
-                                                Demoinfoemail@gmail.com</p>
+                                        <a href="mailto:info@uniqueglazing.uk">
+                                            <p class="pera text-color-tertiary">info@uniqueglazing.uk</p>
                                         </a>
                                     </div>
                                 </div>
@@ -300,9 +415,8 @@
                                         <div class="circle-icon">
                                             <img src="assets/images/icon/map.png" alt="img">
                                         </div>
-                                        <a href="javascript:void(0)">
-                                            <p class="pera text-color-tertiary">4517 Washington Ave. Manchester, Road,
-                                                234 Kentucky USA</p>
+                                        <a href="https://share.google/4yrD7q20QawjM7MMN" target="_blank">
+                                            <p class="pera text-color-tertiary">114 Windsor Road, Slough SL1 2JA</p>
                                         </a>
                                     </div>
                                 </div>
@@ -312,8 +426,7 @@
                                             <img src="assets/images/icon/time.png" alt="img">
                                         </div>
                                         <a href="javascript:void(0)">
-                                            <p class="pera text-color-tertiary">Mon - Sat : 9am - 11pm
-                                                Sunday: 11am - 5pm</p>
+                                            <p class="pera text-color-tertiary">Monday to Saturday<br>8:00 AM to 6:00 PM</p>
                                         </a>
                                     </div>
                                 </div>
@@ -321,10 +434,7 @@
                             <section class="comment-area">
                                 <div class="comment-box">
                                     <h4 class="title">Get In Touch With Us</h4>
-                                    <p class="pera">Duis gravida augue velit eu dignissim felis posuere quis. Integ ante
-                                        urna gravid nec
-                                        est
-                                        tincidunt orci at turpis gravida. Phasellus acdr egestas odio.</p>
+                                    <p class="pera">Looking to upgrade your doors and windows? Get in touch with our glazing specialists for expert advice and a free consultation.</p>
                                     <form class="custom-form">
                                         <div class="row g-4">
                                             <div class="col-xl-4 col-sm-6">
@@ -370,21 +480,21 @@
                             <div class="single-footer-caption">
                                 <div class="footer-tittle">
                                     <h4 class="title">About Us</h4>
-                                    <p class="pera">Etoshi is an exciting contemporary brand
-                                        which focuses on high-quality products
-                                        graphics with a British style</p>
+                                    <p class="pera">Transforming spaces with elegant uPVC and aluminium doors and
+                                        windows, crafted to deliver exceptional quality, security, and timeless design.
+                                    </p>
                                     <ul class="info-listing">
                                         <li class="footer-info-list">
-                                            <a class="single">
+                                            <a class="single" href="mailto:info@uniqueglazing.uk">
                                                 <i class="ri-mail-fill"></i>
-                                                <p class="pera">info@mydomain.com</p>
+                                                <p class="pera">info@uniqueglazing.uk</p>
                                             </a>
                                         </li>
                                         <li class="footer-info-list">
-                                            <a class="single">
+                                            <a class="single" href="tel:+07581316343">
                                                 <div class="d-flex gap-6">
                                                     <i class="ri-phone-fill"></i>
-                                                    <p class="pera">+777 2345 7885</p>
+                                                    <p class="pera">+07581316343</p>
                                                 </div>
                                             </a>
                                         </li>
@@ -395,7 +505,7 @@
                         <div class="col-xl-6">
                             <div class="footer-menu-section">
                                 <div class="logo logo-large light-logo">
-                                    <a><img src="assets/images/logo/loading-logo.png" alt="logo"></a>
+                                    <a><img src="assets/images/logo/pnglogo.png" alt="logo"></a>
                                 </div>
                                 <div class="footer-social-section">
                                     <h4 class="title">Follow Us</h4>
@@ -441,10 +551,10 @@
                                             <a class="menu-list">About</a>
                                         </li>
                                         <li class="list">
-                                            <a class="menu-list">Shop</a>
+                                            <a class="menu-list">Services</a>
                                         </li>
                                         <li class="list">
-                                            <a class="menu-list">Blog</a>
+                                            <a class="menu-list">Project</a>
                                         </li>
                                         <li class="list">
                                             <a class="menu-list">Contact</a>
@@ -456,16 +566,18 @@
                         <div class="col-xl-2 offset-xl-1 col-lg-4 col-sm-6">
                             <div class="single-footer-caption">
                                 <div class="footer-tittle">
-                                    <h4 class="title">My Accounts</h4>
+                                    <h4 class="title">Our Services</h4>
                                     <ul class="listing">
-                                        <li class="single-list"><a class="single">My
-                                                Orders</a></li>
-                                        <li class="single-list"><a class="single">My Credit
-                                                Slips</a></li>
-                                        <li class="single-list"><a class="single">My
-                                                Addresses</a></li>
-                                        <li class="single-list"><a class="single">My Personal
-                                                Info</a></li>
+                                        <li class="single-list"><a class="single">Window Manufacturing
+                                             </a></li>
+                                        <li class="single-list"><a class="single">Aluminum & uPVC Windows
+                                             </a></li>
+                                        <li class="single-list"><a class="single">Sliding & Casement Systems
+                                             </a></li>
+                                        <li class="single-list"><a class="single">Premium Wooden Doors
+                                             </a></li>
+                                        <li class="single-list"><a class="single">Repair & Maintenance
+                                             </a></li>
                                     </ul>
                                 </div>
                             </div>

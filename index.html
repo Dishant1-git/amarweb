@@ -178,6 +178,121 @@
                 font-size: 22px;
             }
         }
+
+        /* Map Section CSS */
+        .map-section {
+            padding: 0 0 100px;
+            background: #f8f4ef;
+        }
+
+        .map-link-container {
+            display: block;
+            text-decoration: none;
+        }
+
+        .map-wrapper-box {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 24px 70px rgba(19, 23, 43, 0.08);
+            border: 1px solid rgba(19, 23, 43, 0.1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .map-wrapper-box iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(10%) contrast(100%);
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            pointer-events: none;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(19, 23, 43, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.4s ease;
+        }
+
+        .map-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(173, 140, 92, 0.3);
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: none;
+            letter-spacing: 0.5px;
+        }
+
+        .map-btn i {
+            font-size: 20px;
+            color: var(--white);
+            transition: all 0.4s ease;
+        }
+
+        .map-wrapper-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 80px rgba(173, 140, 92, 0.15);
+            border-color: rgba(173, 140, 92, 0.3);
+        }
+
+        .map-wrapper-box:hover iframe {
+            transform: scale(1.02);
+        }
+
+        .map-wrapper-box:hover .map-overlay {
+            background: rgba(19, 23, 43, 0.25);
+        }
+
+        .map-wrapper-box:hover .map-btn {
+            background: #FCC013;
+            color: #28292c;
+            box-shadow: 0 10px 30px rgba(252, 192, 19, 0.35);
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .map-wrapper-box:hover .map-btn i {
+            color: #28292c;
+        }
+
+        @media (max-width: 991px) {
+            .map-section {
+                padding: 0 0 60px;
+            }
+            .map-wrapper-box {
+                height: 380px;
+                border-radius: 16px;
+            }
+            .map-btn {
+                opacity: 1;
+                transform: translateY(0);
+                padding: 12px 20px;
+                font-size: 14px;
+                background: var(--primary-color);
+                color: var(--white);
+            }
+            .map-btn i {
+                color: var(--white);
+            }
+        }
     </style>
 </head>
 
@@ -721,12 +836,12 @@
                     <h2 class="title">Our Signature <span class="outline-text">Glazing</span> Projects</h2>
                 </div>
                 <style>
-                    .swiper-slide {
-                        height: 650px;
+                    .featured-image-box {
+                        height: 600px;
                     }
 
-                    .swiper-slide img {
-                        height: 650px;
+                    .featured-image-box img {
+                        height: 600px;
                     }
                 </style>
 
@@ -850,7 +965,9 @@
                 </div>
 
 
-
+<style>
+ 
+</style>
                 <!-- Gallery Grid -->
                 <div class="gallery-grid">
                     <!-- Gallery Item 1: uPVC Windows -->
@@ -1336,6 +1453,24 @@
             </div>
         </section>
         <!-- End-of contact us-->
+
+        <!-- Map Section Start -->
+        <section class="map-section">
+            <div class="container">
+                <a href="https://share.google/4yrD7q20QawjM7MMN" target="_blank" class="map-link-container">
+                    <div class="map-wrapper-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.4133503366347!2d-0.5983937!3d51.505632199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767b6224272da1%3A0xdf9c32b5c40c9a32!2sUnique%20Glazing%20UPVC%20%26%20Aluminium%20Ltd.!5e0!3m2!1sen!2sin!4v1782969038721!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <div class="map-overlay">
+                            <div class="map-btn">
+                                <i class="ri-map-pin-2-fill"></i>
+                                <span>Open in Google Maps</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Map Section End -->
 
 
 
