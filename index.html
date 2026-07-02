@@ -849,7 +849,7 @@
                     <h2 class="title">Our Glazing <span class="outline-text">Works</span> Showcase</h2>
                 </div>
 
-               
+
 
                 <!-- Gallery Grid -->
                 <div class="gallery-grid">
@@ -1298,30 +1298,36 @@
                             <h4 class="sub-title">Send A Message</h4>
                             <p class="pera mb-30">Tell us what you need and we will help you choose the right solution.
                             </p>
-                            <form class="custom-form">
+                            <form class="custom-form" id="contactForm">
                                 <div class="row g-4">
+
                                     <div class="col-md-6">
                                         <input class="form-control custom-form-control" type="text" name="name"
                                             placeholder="Your Name*" required>
                                     </div>
+
                                     <div class="col-md-6">
                                         <input class="form-control custom-form-control" type="tel" name="phone"
                                             placeholder="Phone Number*" required>
                                     </div>
+
                                     <div class="col-12">
                                         <input class="form-control custom-form-control" type="email" name="email"
                                             placeholder="Email Address*" required>
                                     </div>
+
                                     <div class="col-12">
                                         <textarea class="form-control custom-form-control custom-form-textarea"
                                             name="message" placeholder="Write Your Message*" required></textarea>
                                     </div>
+
                                     <div class="col-12">
-                                        <button type="submit" class="submit-btn">
+                                        <button type="submit" class="submit-btn" id="submitBtn">
                                             Send Message
                                             <i class="ri-arrow-right-line"></i>
                                         </button>
                                     </div>
+
                                 </div>
                             </form>
                         </div>
@@ -1491,6 +1497,51 @@
     <script src="assets/js/portfolio.js"></script>
     <!-- Main js-->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+    <script>
+        emailjs.init({
+            publicKey: "BKzk7zWO67XDhmZEc",
+        });
+
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const btn = document.getElementById("submitBtn");
+
+            btn.disabled = true;
+            btn.innerHTML = "Sending...";
+
+            emailjs.sendForm(
+                "service_ctxi1kd",
+                "template_uppnu47",
+                this
+            )
+                .then(function () {
+
+                    alert("Message sent successfully!");
+
+                    form.reset();
+
+                    btn.disabled = false;
+                    btn.innerHTML = `Send Message <i class="ri-arrow-right-line"></i>`;
+
+                })
+                .catch(function (error) {
+
+                    console.log(error);
+
+                    alert("Something went wrong.");
+
+                    btn.disabled = false;
+                    btn.innerHTML = `Send Message <i class="ri-arrow-right-line"></i>`;
+                });
+
+        });
+    </script>
 </body>
 
 </html>
